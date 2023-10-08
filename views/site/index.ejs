@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examhub | Home</title>
+
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/551e46de4a.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- NAVBAR  -->
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top py-3" id="nav-bar">
+        <div class="container">
+          <div class="logo">
+            <a href="index.html">
+              <img src="/logo.svg" alt="Exam Hub" />
+            </a>
+          </div>
+          <button
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler navbar-toggler-right"
+          >
+            <i class="fa fa-bars"></i>
+          </button>
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto" id="current">
+              <li class="nav-item active">
+                <a href="/about" class="button2" id="about-button">About</a>
+              </li>
+              <li class="nav-item">
+              <% if(!user){%>
+                <a href="/auth/login" class="button2" id="contact-button"
+                  >Login/SignUp</a
+                >
+                <% } else{%>
+                  <a href="/auth/user/<%=user.id %> " class="button2" id="contact-button"
+                  >My Profile</a
+                  <% } %> 
+                </li>
+
+              <li>
+                <a href="/contact" class="button2" id="login-button">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- NAVBAR  -->
+    <div class="container" id="main-text">
+      <div class="container py-3">
+        <div class="row h-100 align-items-center py-5">
+          <div class="col-lg-6">
+            <h1 class="display-4">Welcome to ExamHub</h1>
+            <p class="lead text-muted mb-0">
+              The ultimate hub for educators and learners alike! Our platform is designed to empower both teachers and students by providing a seamless experience for uploading and downloading question papers. Whether you're a dedicated educator looking to share your knowledge or a passionate learner seeking valuable resources, our platform is your go-to destination. Join our vibrant community today and unlock a world of educational possibilities at your fingertips.
+            </p>
+            <a href="/explore?mode=upload" class="button2" id="search-button"
+              >Explore Papers<i class="fa fa-magnifying-glass"></i
+            ></a>
+          </div>
+          <div class="col-lg-6 d-lg-block">
+            <img src="resources/exam-main.png" alt="" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="heading">
+      <h4>POWERED BY</h4>
+    </div>
+    <div class="container bg-light" id="powered-by">
+      <div class="software-used">
+        <img src="resources/html.svg" alt="" />
+        <img src="resources/css.svg" alt="" />
+        <img src="resources/js.svg" alt="" />
+        <img src="resources/nodejs.svg" alt="" />
+        <img src="resources/firebase.svg" alt="" />
+      </div>
+    </div>
+    <div class="container">
+      <p class="lead text-muted mb-0">
+        At Examhub, we're revolutionizing the way educators and learners access valuable educational resources. Our platform is designed with you in mind, providing a seamless and innovative experience for both educators and students. For educators, we offer a powerful platform to effortlessly upload and share question papers, allowing you to showcase your expertise and help others in their educational journey. For learners, our vast collection of question papers covers a wide range of subjects and levels, giving you the tools you need to excel in your studies. With easy-to-use search and download options, you can quickly find the materials you need to succeed. Join our growing community of educators and learners and take your educational experience to the next level with Examhub.
+      </p>
+      <p class="lead text-muted mb-0">
+        
+      </p>
+      <p class="lead text-muted mb-0">
+        
+      </p>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
